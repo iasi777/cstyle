@@ -1,5 +1,15 @@
 ## jQuery
 
+  - 给 jQuery 对象变量加 `$` 前缀.
+
+    ```javascript
+    // bad
+    var sidebar = $('.sidebar');
+
+    // good
+    var $sidebar = $('.sidebar');
+    ```
+
   - 缓存 jQuery 查询。
 
     ```javascript
@@ -28,11 +38,11 @@
     ```
 
   - 对 DOM 查询使用级联的 `$('.sidebar ul')` 或 `$('.sidebar > ul')` ，[jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16) 。
-  - 对有作用域的 jQuery 对象查询使用 `find` 。
+  - 对有缓存的 jQuery 对象查询使用 `find` 。
 
     ```javascript
     // bad
-    $('.sidebar', 'ul').hide();
+    $('ul', '.sidebar').hide();
 
     // bad
     $('.sidebar').find('ul').hide();
@@ -43,8 +53,6 @@
     // good
     $('.sidebar > ul').hide();
 
-    // good (slower)
-    $sidebar.find('ul');
-
-    // good (faster)
-    $($sidebar[0]).find('ul');
+    // good
+    $sidebar.find('ul').hide();
+    ```

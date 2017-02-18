@@ -31,7 +31,7 @@
     }
     ```
 
-  - 可以创建 get() 和 set() 函数，但是要保持一致。
+  - 可以创建 get() 和 set() 函数，但是要一起存在。
 
     ```javascript
     function Jedi(options) {

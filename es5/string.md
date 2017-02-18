@@ -16,48 +16,42 @@
     var fullName = 'Bob ' + this.lastName;
     ```
 
-  - 超过80个字符的字符串应该使用字符串连接换行
-  - 注: 如果过度使用，长字符串连接可能会对性能有影响. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
+  - 超过 80 个字符的字符串应该使用字符串连接换行。
+  - 注: 如果过度使用，长字符串连接可能会对性能有影响。 [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
 
     ```javascript
     // bad
     var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
     // bad
-    var errorMessage = 'This is a super long error that \
-    was thrown because of Batman. \
-    When you stop to think about \
-    how Batman had anything to do \
+    var errorMessage = 'This is a super long error that was thrown because \
+    of Batman. When you stop to think about how Batman had anything to do \
     with this, you would get nowhere \
     fast.';
 
-
     // good
-    var errorMessage = 'This is a super long error that ' +
-      'was thrown because of Batman.' +
-      'When you stop to think about ' +
-      'how Batman had anything to do ' +
-      'with this, you would get nowhere ' +
-      'fast.';
+    var errorMessage = 'This is a super long error that was thrown because ' +
+      'of Batman. When you stop to think about how Batman had anything to do ' +
+      'with this, you would get nowhere fast.';
     ```
 
-  - 编程时使用 join 而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
+  - 编程时使用 `join` 而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2) 。
 
     ```javascript
     var items,
       messages,
-      length, 
+      length,
       i;
 
     messages = [
       {
         state: 'success',
         message: 'This one worked.'
-      },
+      }, 
       {
         state: 'success',
         message: 'This one worked as well.'
-      },
+      }, 
       {
         state: 'error',
         message: 'This one did not work.'
@@ -82,9 +76,10 @@
       items = [];
 
       for (i = 0; i < length; i++) {
-        items[i] = messages[i].message;
+        // use direct assignment in this case because we're micro-optimizing.
+        items[i] = '<li>' + messages[i].message + '</li>';
       }
 
-      return '<ul><li>' + items.join('</li><li>') + '</li></ul>';
+      return '<ul>' + items.join('') + '</ul>';
     }
     ```

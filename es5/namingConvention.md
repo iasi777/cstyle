@@ -20,18 +20,12 @@
     // bad
     var OBJEcttsssss = {};
     var this_is_my_object = {};
-    var this-is-my-object = {};
-    function c() {};
-    var u = new user({
-      name: 'Bob Parr'
-    });
+    var o = {};
+    function c() {}
 
     // good
     var thisIsMyObject = {};
-    function thisIsMyFunction() {};
-    var user = new User({
-      name: 'Bob Parr'
-    });
+    function thisIsMyFunction() {}
     ```
 
   - 当命名构造函数或类时使用驼峰式大写。
@@ -56,41 +50,49 @@
     });
     ```
 
-  - 命名私有属性时前面加个下划线 `_`。
-
+  - 不要在名称开头或结尾加下划线，很容易让人误以为是私有属性。更不要试图用名称格式来表示私有属性。
+  
     ```javascript
     // bad
     this.__firstName__ = 'Panda';
     this.firstName_ = 'Panda';
+    this._firstName = 'Panda';
 
     // good
-    this._firstName = 'Panda';
+    this.firstName = 'Panda';
     ```
 
-  - 当保存对 `this` 的引用时使用 `_this`。
+  - 不要保存 `this` 的引用。可以用 [bind](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 绑定 `this`。
 
     ```javascript
     // bad
-    function() {
+    function () {
       var self = this;
-      return function() {
+      return function () {
         console.log(self);
       };
     }
 
     // bad
-    function() {
+    function () {
       var that = this;
-      return function() {
+      return function () {
         console.log(that);
       };
     }
 
-    // good
-    function() {
+    // bad
+    function () {
       var _this = this;
-      return function() {
+      return function () {
         console.log(_this);
       };
+    }
+
+    // good
+    function () {
+      return function () {
+        console.log(this);
+      }.bind(this);
     }
     ```

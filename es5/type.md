@@ -1,6 +1,6 @@
 ## 类型
 
-  - **原始值**: 相当于传值
+  - **原始值**：直接存取值。
 
     - `string`
     - `number`
@@ -9,22 +9,22 @@
     - `undefined`
 
     ```javascript
-    var foo = 1,
-      bar = foo;
+    var foo = 1;
+    var bar = foo;
 
     bar = 9;
 
     console.log(foo, bar); // => 1, 9
     ```
-  - **复杂类型**: 相当于传引用
+  - **复杂类型**：存取对值的引用。
 
     - `object`
     - `array`
     - `function`
 
     ```javascript
-    var foo = [1, 2],
-      bar = foo;
+    var foo = [1, 2];
+    var bar = foo;
 
     bar[0] = 9;
 

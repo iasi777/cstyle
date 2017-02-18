@@ -1,6 +1,6 @@
 ## 变量
 
-  - 总是使用 `var` 来声明变量，如果不这么做将导致产生全局变量，我们要避免污染全局命名空间。
+  - 总是使用 `var` 来声明变量，如果不这么做将产生全局变量，我们要避免污染全局命名空间。
 
     ```javascript
     // bad
@@ -10,18 +10,24 @@
     var superPower = new SuperPower();
     ```
 
-  - 使用一个 `var` 以及新行声明多个变量，缩进 2 个空格。
-
+  - 每一个变量声明前都加 `var`。这样更容易添加新的变量声明，同时你也不用担心出现 `;` 替代 `,` 或其他错误。
+  
     ```javascript
     // bad
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
+
+    // bad
+    // (compare to above, and try to spot the mistake)
+    var items = getItems(),
+        goSportsTeam = true;
+        dragonball = 'z';
+
+    // good
     var items = getItems();
     var goSportsTeam = true;
     var dragonball = 'z';
-
-    // good
-    var items = getItems(),
-      goSportsTeam = true,
-      dragonball = 'z';
     ```
 
   - 最后再声明未赋值的变量，当你想引用之前已赋值变量的时候很有用。
@@ -29,28 +35,29 @@
     ```javascript
     // bad
     var i, len, dragonball,
-      items = getItems(),
-      goSportsTeam = true;
+        items = getItems(),
+        goSportsTeam = true;
 
     // bad
-    var i, items = getItems(),
-      dragonball,
-      goSportsTeam = true,
-      len;
+    var i;
+    var items = getItems();
+    var dragonball;
+    var goSportsTeam = true;
+    var len;
 
     // good
-    var items = getItems(),
-      goSportsTeam = true,
-      dragonball,
-      length,
-      i;
+    var items = getItems();
+    var goSportsTeam = true;
+    var dragonball;
+    var length;
+    var i;
     ```
 
-  - 在作用域顶部声明变量，避免变量声明和赋值引起的相关问题。
+  - 在作用域顶部声明变量，避免 [声明提升](http://www.zcfy.cc/article/465) 引起的相关问题。
 
     ```javascript
     // bad
-    function() {
+    function () {
       test();
       console.log('doing stuff..');
 
@@ -66,7 +73,7 @@
     }
 
     // good
-    function() {
+    function () {
       var name = getName();
 
       test();
@@ -81,24 +88,29 @@
       return name;
     }
 
-    // bad
-    function() {
+    // bad - unnecessary function call
+    function () {
       var name = getName();
 
       if (!arguments.length) {
         return false;
       }
+
+      this.setFirstName(name);
 
       return true;
     }
 
     // good
-    function() {
+    function () {
+      var name;
+
       if (!arguments.length) {
         return false;
       }
 
-      var name = getName();
+      name = getName();
+      this.setFirstName(name);
 
       return true;
     }

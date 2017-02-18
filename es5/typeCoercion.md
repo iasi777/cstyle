@@ -10,6 +10,9 @@
     var totalScore = this.reviewScore + '';
 
     // good
+    var totalScore = String(this.reviewScore);
+    
+    // good
     var totalScore = '' + this.reviewScore;
 
     // bad
@@ -19,7 +22,7 @@
     var totalScore = this.reviewScore + ' total score';
     ```
 
-  - 对数字使用 `parseInt` 并且总是带上类型转换的基数.
+  - 对数字使用 [parseInt](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 并且总是带上类型转换的基数.
 
     ```javascript
     var inputValue = '4';
@@ -41,16 +44,8 @@
 
     // good
     var val = parseInt(inputValue, 10);
-
-    // good
-    /**
-     * parseInt was the reason my code was slow.
-     * Bitshifting the String to coerce it to a
-     * Number made it a lot faster.
-     */
-    var val = inputValue >> 0;
     ```
-
+    
   - 布尔值:
 
     ```javascript

@@ -1,6 +1,6 @@
-## 条件表达式和等号
+## 比较运算符和相等
 
-  - 适当使用 `===` 和 `!==` 以及 `==` 和 `!=`.
+  - 用 `===` 和 `!==` 替代 `==` 和 `!=`.
   - 条件表达式的强制类型转换遵循以下规则：
 
     - **对象** 被计算为 **true**
@@ -41,4 +41,4 @@
     }
     ```
 
-  - 阅读 [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) 了解更多
+  - 阅读 `Truth Equality and JavaScript` [中文版](http://xiaoyuze88.github.io/blog/2013/04/13/JS中的判断为真与相等-Truth,-Equalit-and-JavaScript) - [英文版](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) 了解更多

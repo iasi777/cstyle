@@ -10,7 +10,7 @@
     var items = [];
     ```
 
-  - 如果你不知道数组的长度，使用 `push`
+  - 给数组添加数据项，使用 `push`
 
     ```javascript
     var someStack = [];
@@ -22,7 +22,7 @@
     someStack.push('abracadabra');
     ```
 
-  - 当你需要拷贝数组时使用 [slice](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice). [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+  - 当你需要拷贝数组时使用 [slice](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 。 [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7) 。
 
     ```javascript
     var len = items.length,
