@@ -38,10 +38,10 @@
   - 编程时使用 `join` 而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2) 。
 
     ```javascript
-    var items,
-      messages,
-      length,
-      i;
+    var items;
+    var messages;
+    var length;
+    var i;
 
     messages = [
       {

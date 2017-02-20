@@ -4,20 +4,11 @@ module.exports = {
   },
   'extends': 'eslint:recommended',
   'rules': {
-    'indent': [
-      'error',
-      4
-    ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
-    'quotes': [
-      'error',
-      'single'
-    ],
+    'indent': ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    'quotes': ['error', 'single'],
     // 分号
-    // 总是以分号结尾
+    // 语句结束一定要加分号
     'semi': ['error', 'always'],
     // 避免不必要的分号
     'no-extra-semi': 'error',
