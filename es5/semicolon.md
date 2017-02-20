@@ -1,6 +1,6 @@
 ## 分号
 
-  - 语句结束一定要加分号。
+  - 语句结束一定要加分号。eslint: [semi](http://eslint.org/docs/rules/semi.html)
 
     ```javascript
     // bad
@@ -15,3 +15,4 @@
       return name;
     })();
     ```
+  - 
