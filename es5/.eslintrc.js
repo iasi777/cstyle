@@ -13,6 +13,12 @@ module.exports = {
     // 避免不必要的字符转码
     'no-useless-escape': 'error',
 
+    // 对象
+    // 使用字面量创建对象
+    'no-new-object': 'error',
+    // 不要用 new 创建字符串，数值，布尔值的包装对象
+    'no-new-wrappers': 'error',
+
     // 分号
     // 语句结束一定要加分号
     'semi': ['error', 'always'],

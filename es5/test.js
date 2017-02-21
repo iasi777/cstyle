@@ -48,3 +48,12 @@ str = "a'c'";
 str = '\abc';
 str = '\"';
 str = '\'';
+
+// 对象
+var obj = new Object();
+var str = new String('abc');
+var num = new Number(123);
+var bool = new Boolean(true);
+var str = new String;
+var str = String(123);
+var str = '123';
