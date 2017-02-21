@@ -6,7 +6,13 @@ module.exports = {
   'rules': {
     'indent': ['error', 2],
     'linebreak-style': ['error', 'unix'],
+
+    // 字符串
+    // 对字符串使用单引号 `''`
     'quotes': ['error', 'single'],
+    // 避免不必要的字符转码
+    'no-useless-escape': 'error',
+
     // 分号
     // 语句结束一定要加分号
     'semi': ['error', 'always'],

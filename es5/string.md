@@ -1,6 +1,6 @@
 ## 字符串
 
-  - 对字符串使用单引号 `''`
+  - 对字符串使用单引号 `''`。eslint: [quotes](http://eslint.org/docs/rules/quotes)
 
     ```javascript
     // bad
@@ -14,6 +14,22 @@
 
     // good
     var fullName = 'Bob ' + this.lastName;
+
+    // bad
+    var str = "a'b'c";
+
+    // good
+    var str = 'a"b"c';
+    ```
+
+  - 避免不必要的字符转码。eslint: [no-useless-escape](http://eslint.org/docs/rules/no-useless-escape)
+
+    ```javascript
+    // bad
+    '\"';
+    
+    // good
+    '\'';
     ```
 
   - 超过 80 个字符的字符串应该使用字符串连接换行。

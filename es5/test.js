@@ -1,7 +1,7 @@
 /**
  * Created by jszhou on 2017/2/20.
  */
-function fun() {};
+function fun() { };
 var a = 1;
 console.log(a);
 
@@ -29,7 +29,7 @@ for (var i = 0; i < 10; i++) {
   window.a = a;
 };
 
-for (var pro in window){
+for (var pro in window) {
   window[pro] = 0;
 };
 
@@ -39,3 +39,12 @@ try {
   a = e;
 };
 
+
+// 字符串
+
+var str = 'str';
+str = 'a"c"';
+str = "a'c'";
+str = '\abc';
+str = '\"';
+str = '\'';
