@@ -1,15 +1,15 @@
 module.exports = {
-  'env': {
-    'browser': true
+  env: {
+    browser: true
   },
-  'extends': 'eslint:recommended',
-  'rules': {
-    'indent': ['error', 2],
+  extends: 'eslint:recommended',
+  rules: {
+    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
 
     // 字符串
     // 对字符串使用单引号 `''`
-    'quotes': ['error', 'single'],
+    quotes: ['error', 'single'],
     // 避免不必要的字符转码
     'no-useless-escape': 'error',
 
@@ -18,6 +18,10 @@ module.exports = {
     'no-new-object': 'error',
     // 不要用 new 创建字符串，数值，布尔值的包装对象
     'no-new-wrappers': 'error',
+    // 只给非法标识符的对象属性名称加引号
+    'quote-props': ['error', 'as-needed', {keywords: false, unnecessary: true, numbers: true}],
+    // 属性访问时，如果换行，点符号 `.` 与属性在同一行
+    'dot-location': ['error', 'property'],
 
     // 分号
     // 语句结束一定要加分号
@@ -25,6 +29,6 @@ module.exports = {
     // 避免不必要的分号，`if-else`、`while`、`for`、`for-in`、`try-catch-finally`、函数声明、等的代码块后面不需要分号
     'no-extra-semi': 'error',
     // 在分号后面加空格，行末的分号除外
-    'semi-spacing': ['error', {'before': false, 'after': true}]
+    'semi-spacing': ['error', {before: false, after: true}]
   }
 };

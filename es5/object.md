@@ -23,40 +23,39 @@
     // good
     var str = String(123);
     ```
-
-
-  - 不要使用保留字 [reserved words](http://es5.github.io/#x7.6.1) 作为键。 它在 IE8 下不能正常运行。 [更多信息](https://github.com/airbnb/javascript/issues/61)。
+  
+  - 只给非法[标识符](https://developer.mozilla.org/zh-CN/docs/Glossary/Identifier)的对象属性名称加引号。eslint: [quote-props](http://eslint.org/docs/rules/quote-props)
 
     ```javascript
     // bad
-    var superman = {
-      default: { clark: 'kent' },
-      private: true
+    var obj = {
+      'name': 'Eddy',
+      'while': 123,
+      123: true,
+      a-b: 'ab'
     };
 
     // good
-    var superman = {
-      defaults: { clark: 'kent' },
-      hidden: true
+    var obj = {
+      name: 'Eddy',
+      while: 123,
+      '123': true,
+      'a-b': 'ab'
     };
     ```
-  
-  
-  - 可以用同义字替代保留字。
-  
+
+  - 属性访问时，如果换行，点符号 `.` 与属性在同一行。eslint: [dot-location](http://eslint.org/docs/rules/dot-location)
+
     ```javascript
     // bad
-    var superman = {
-      class: 'alien'
-    };
-  
-    // bad
-    var superman = {
-      klass: 'alien'
-    };
-  
+    object.
+      property();
+
     // good
-    var superman = {
-      type: 'alien'
-    };
+    object
+      .property();
     ```
+
+## 参考资料
+
+  - [Unquoted property names / object keys in JavaScript](https://mathiasbynens.be/notes/javascript-properties)

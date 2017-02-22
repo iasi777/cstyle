@@ -57,3 +57,27 @@ var bool = new Boolean(true);
 var str = new String;
 var str = String(123);
 var str = '123';
+obj = {
+  'a': 0,
+  while: 123,
+  'a-b': 123,
+  '123': 'abc'
+};
+
+obj = {
+  name: 'Eddy',
+  while: 123,
+  '123': true,
+  'a-b': 'ab'
+};
+
+console.log(obj[123]);
+
+var object = {};
+// bad
+object.
+  property();
+
+// good
+object
+  .property();
