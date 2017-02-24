@@ -286,13 +286,7 @@ module.exports = {
     // ==========================================================================================================
     // 错误
     // require trailing commas in multiline object literals
-    'comma-dangle': ['error', {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'always-multiline',
-    }],
+    'comma-dangle': ['error', 'never'],
 
     // Disallow await inside of loops
     // http://eslint.org/docs/rules/no-await-in-loop
@@ -463,7 +457,7 @@ module.exports = {
 
     // require function expressions to have a name
     // http://eslint.org/docs/rules/func-names
-    'func-names': 'warn',
+    'func-names': 'off',
 
     // enforces use of function declarations or expressions
     // http://eslint.org/docs/rules/func-style
@@ -679,7 +673,7 @@ module.exports = {
     'no-ternary': 'off',
 
     // disallow trailing whitespace at the end of lines
-    'no-trailing-spaces': 'error',
+    'no-trailing-spaces': ['error', {skipBlankLines: true}],
 
     // disallow dangling underscores in identifiers
     'no-underscore-dangle': ['error', { allowAfterThis: false }],
