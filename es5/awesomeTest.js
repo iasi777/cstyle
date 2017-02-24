@@ -287,3 +287,11 @@ for (key in foo) {
     doSomething(key);
   }
 }
+
+// 尽量不要用原生的 `alert`, `confirm`, and `prompt` 方法。eslint: [no-alert](http://eslint.org/docs/rules/no-alert)
+
+// bad
+alert('hello');
+
+// good
+customAlert('hello');
