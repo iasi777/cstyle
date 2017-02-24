@@ -29,7 +29,7 @@
     ```javascript
     // bad
     var obj = {
-      'name': 'Eddy',
+      'name': 'jszhou',
       'while': 123,
       123: true,
       a-b: 'ab'
@@ -37,7 +37,7 @@
 
     // good
     var obj = {
-      name: 'Eddy',
+      name: 'jszhou',
       while: 123,
       '123': true,
       'a-b': 'ab'
@@ -54,6 +54,19 @@
     // good
     object
       .property();
+    ```
+
+  - 对象的每一个属性都在新的一行。eslint: [object-property-newline](http://eslint.org/docs/rules/object-property-newline)
+
+    ```javascript
+    // bad
+    var obj = {name: 'jszhou', style: 'newline'};
+
+    // good
+    var obj = {
+      name: 'jszhou',
+      style: 'newline'
+    };
     ```
 
 ## 参考资料
