@@ -319,7 +319,7 @@ module.exports = {
     // ==========================================================================================================
     // 错误
     // require trailing commas in multiline object literals
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/comma-dangle
     'comma-dangle': ['error', 'never'],
 
     // Disallow await inside of loops
@@ -327,47 +327,47 @@ module.exports = {
     'no-await-in-loop': 'error',
 
     // disallow assignment in conditional expressions
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-cond-assign
     'no-cond-assign': ['error', 'always'],
 
     // disallow use of console
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-console
     'no-console': 'warn',
 
     // disallow use of constant expressions in conditions
-    // http://eslint.org/docs/rules/
-    'no-constant-condition': 'warn',
+    // http://eslint.org/docs/rules/no-constant-condition
+    'no-constant-condition': 'error',
 
     // disallow control characters in regular expressions
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-control-regex
     'no-control-regex': 'error',
 
     // disallow use of debugger
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-debugger
     'no-debugger': 'error',
 
     // disallow duplicate arguments in functions
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-dupe-args
     'no-dupe-args': 'error',
 
     // disallow duplicate keys when creating object literals
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-dupe-keys
     'no-dupe-keys': 'error',
 
     // disallow a duplicate case label.
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-duplicate-case
     'no-duplicate-case': 'error',
 
     // disallow empty statements
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-empty
     'no-empty': 'error',
 
     // disallow the use of empty character classes in regular expressions
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-empty-character-class
     'no-empty-character-class': 'error',
 
     // disallow assigning to the exception in a catch block
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-ex-assign
     'no-ex-assign': 'error',
 
     // disallow double-negation boolean casts in a boolean context
@@ -383,24 +383,28 @@ module.exports = {
     }],
 
     // disallow unnecessary semicolons
-    // http://eslint.org/docs/rules/
+    // 避免不必要的分号，`if-else`、`while`、`for`、`for-in`、`try-catch-finally`、函数声明、等的代码块后面不需要分号
+    // http://eslint.org/docs/rules/no-extra-semi
     'no-extra-semi': 'error',
 
     // disallow overwriting functions written as function declarations
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-func-assign
     'no-func-assign': 'error',
 
     // disallow function or variable declarations in nested blocks
-    // http://eslint.org/docs/rules/
+    // http://eslint.org/docs/rules/no-inner-declarations
     'no-inner-declarations': 'error',
 
     // disallow invalid regular expression strings in the RegExp constructor
+    // http://eslint.org/docs/rules/no-invalid-regexp
     'no-invalid-regexp': 'error',
 
     // disallow irregular whitespace outside of strings and comments
+    // http://eslint.org/docs/rules/no-irregular-whitespace
     'no-irregular-whitespace': 'error',
 
-    // disallow the use of object properties of the global object (Math and JSON) as functions
+    // disallow the use of object properties of the global object (Math, JSON and Reflect) as functions
+    // http://eslint.org/docs/rules/no-obj-calls
     'no-obj-calls': 'error',
 
     // disallow use of Object.prototypes builtins directly
@@ -408,9 +412,11 @@ module.exports = {
     'no-prototype-builtins': 'error',
 
     // disallow multiple spaces in a regular expression literal
+    // http://eslint.org/docs/rules/no-regex-spaces
     'no-regex-spaces': 'error',
 
     // disallow sparse arrays
+    // http://eslint.org/docs/rules/no-sparse-arrays
     'no-sparse-arrays': 'error',
 
     // Disallow template literal placeholder syntax in regular strings
@@ -422,6 +428,7 @@ module.exports = {
     'no-unexpected-multiline': 'error',
 
     // disallow unreachable statements after a return, throw, continue, or break statement
+    // // http://eslint.org/docs/rules/no-unreachable
     'no-unreachable': 'error',
 
     // disallow return/throw/break/continue inside finally blocks
@@ -431,11 +438,13 @@ module.exports = {
     // disallow negating the left operand of relational operators
     // http://eslint.org/docs/rules/no-unsafe-negation
     'no-unsafe-negation': 'error',
+
     // disallow negation of the left operand of an in expression
     // deprecated in favor of no-unsafe-negation
     'no-negated-in-lhs': 'off',
 
     // disallow comparisons with the value NaN
+    // http://eslint.org/docs/rules/use-isnan
     'use-isnan': 'error',
 
     // ensure JSDoc comments are valid
