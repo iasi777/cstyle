@@ -244,7 +244,7 @@ var x = object['bar'];
 // good
 var x = object.bar;
 
-// 始终使用 `===` 、 `!==` 比较符，与 `null` 比较除外。eslint: [eqeqeq](// http://eslint.org/docs/rules/eqeqeq)
+// 始终使用 `===` 、 `!==` 比较符。eslint: [eqeqeq](// http://eslint.org/docs/rules/eqeqeq)
 
 // bad
 if (object == 'abc') {
@@ -295,3 +295,71 @@ alert('hello');
 
 // good
 customAlert('hello');
+
+// 不要用 `arguments.caller` or `arguments.callee`。[no-caller](http://eslint.org/docs/rules/no-caller)
+
+// bad
+function foo() {
+  arguments.callee();
+}
+
+// good
+function foo() {
+  foo();
+}
+
+// 在 `case/default` 从句中不允许词法声明（`var`，`let`，`const`，`function`，`class`）[no-case-declarations](http://eslint.org/docs/rules/no-case-declarations)
+
+// bad
+switch (foo) {
+  case 1:
+    let x = 1;
+    break;
+  case 2:
+    const y = 2;
+    break;
+  case 3:
+    function f() {}
+    break;
+  default:
+    class C {}
+}
+
+// good
+var f;
+switch (foo) {
+  case 1: {
+    let x = 1;
+    break;
+  }
+  case 2: {
+    const y = 2;
+    break;
+  }
+  case 3:
+    f = function () {};
+    break;
+  default: {
+    class C {}
+  }
+}
+
+// 不允许含有 `return` 的 `if` 语句后面带 `else`。[no-else-return](http://eslint.org/docs/rules/no-else-return)
+
+// bad
+function foo(num) {
+  if (num === 1) {
+    return 1;
+  } else {
+    return 2;
+  }
+}
+
+// good
+function foo(num) {
+  if (num === 1) {
+    return 1;
+  }
+
+  return 2;
+}
