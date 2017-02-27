@@ -1070,6 +1070,7 @@ module.exports = {
     }],
 
     // require let or const instead of var
+    // http://eslint.org/docs/rules/no-var
     'no-var': 'error',
 
     // require method and property shorthand syntax for object literals
@@ -1153,6 +1154,7 @@ module.exports = {
     // ======================================================================
     // strict
     // babel inserts `'use strict';` for us
+    // http://eslint.org/docs/rules/strict
     strict: ['error', 'never']
   }
 };
