@@ -596,7 +596,8 @@ module.exports = {
     // http://eslint.org/docs/rules/lines-around-comment
     'lines-around-comment': ['error', {
       beforeBlockComment: true,
-      beforeLineComment: true
+      beforeLineComment: true,
+      allowBlockStart: true
     }],
 
     // require or disallow newlines around directives
