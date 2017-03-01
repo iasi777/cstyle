@@ -96,7 +96,8 @@ module.exports = {
 
     // disallow Unnecessary Labels
     // http://eslint.org/docs/rules/no-extra-label
-    'no-extra-label': 'error',
+    // 开启了 no-labels
+    'no-extra-label': 'off',
 
     // disallow fallthrough of case statements
     // http://eslint.org/docs/rules/no-fallthrough
@@ -135,7 +136,7 @@ module.exports = {
 
     // disallow use of labels for anything other then loops and switches
     // http://eslint.org/docs/rules/no-labels
-    'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
+    'no-labels': 'error',
 
     // disallow unnecessary nested blocks
     // http://eslint.org/docs/rules/no-lone-blocks
@@ -256,7 +257,8 @@ module.exports = {
 
     // disallow unused labels
     // http://eslint.org/docs/rules/no-unused-labels
-    'no-unused-labels': 'error',
+    // 开启了 no-labels
+    'no-unused-labels': 'off',
 
     // disallow unnecessary .call() and .apply()
     // http://eslint.org/docs/rules/no-useless-call
@@ -744,7 +746,6 @@ module.exports = {
       'error',
       'ForInStatement',
       'ForOfStatement',
-      'LabeledStatement',
       'WithStatement',
     ],
 
@@ -917,7 +918,8 @@ module.exports = {
 
     // disallow labels that share a name with a variable
     // http://eslint.org/docs/rules/no-label-var
-    'no-label-var': 'error',
+    // 开启了 no-labels
+    'no-label-var': 'off',
 
     // disallow specific globals
     // http://eslint.org/docs/rules/no-restricted-globals
@@ -941,8 +943,8 @@ module.exports = {
 
     // disallow use of undefined variable
     // http://eslint.org/docs/rules/no-undefined
-    // TODO: enable?
-    'no-undefined': 'error',
+    // 与 no-shadow-restricted-names 重复
+    'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
     // http://eslint.org/docs/rules/no-unused-vars
