@@ -3,25 +3,25 @@
  */
 
 // 不要用 `delete` 删除变量和函数声明。[no-delete-var](http://eslint.org/docs/rules/no-delete-var)
-// bad
-var a = 1;
-function test() {
-  // stuff
-}
-
-delete a;
-delete test;
-
-// good
-var obj = {
-  a: 1,
-  test: function () {
-    // stuff
-  }
-};
-
-delete obj.a;
-delete obj.test;
+// // bad
+// var a = 1;
+// function test() {
+//   // stuff
+// }
+//
+// delete a;
+// delete test;
+//
+// // good
+// var obj = {
+//   a: 1,
+//   test: function () {
+//     // stuff
+//   }
+// };
+//
+// delete obj.a;
+// delete obj.test;
 
 // 不要在同一作用域或嵌套作用域中定义同名变量或同名函数，也不要定义与内置全局对象同名的变量或函数。eslint: [no-redeclare](http://eslint.org/docs/rules/no-redeclare), [no-shadow](http://eslint.org/docs/rules/no-shadow)
 // // bad

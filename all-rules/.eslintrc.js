@@ -512,8 +512,7 @@ module.exports = {
     // http://eslint.org/docs/rules/func-call-spacing
     'func-call-spacing': ['error', 'never'],
 
-    // requires function names to match the name of the variable or property to which they are
-    // assigned
+    // requires function names to match the name of the variable or property to which they are assigned
     // http://eslint.org/docs/rules/func-name-matching
     'func-name-matching': ['off', 'always', {
       includeCommonJSModuleExports: false
@@ -532,8 +531,7 @@ module.exports = {
     // http://eslint.org/docs/rules/id-blacklist
     'id-blacklist': 'off',
 
-    // this option enforces minimum and maximum identifier lengths
-    // (variable names, property names etc.)
+    // this option enforces minimum and maximum identifier lengths(variable names, property names etc.)
     // http://eslint.org/docs/rules/id-length
     'id-length': 'off',
 

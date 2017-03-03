@@ -134,3 +134,36 @@
 //   b: 2,
 //   c: 3
 // };
+
+// 计算属性的前后不要出现空格。eslint: [computed-property-spacing](http://eslint.org/docs/rules/computed-property-spacing)
+
+// // bad
+// obj[ foo ] = 1;
+// obj[ bar ] = 1;
+//
+// // good
+// obj[foo] = 1;
+// obj[bar] = 1;
+
+// 在文件的末尾保留一空行。eslint: [eol-last](http://eslint.org/docs/rules/eol-last)
+
+// // bad
+// function test() {
+//   // stuff
+// }
+//
+// // good
+// function test() {
+//   // stuff
+// }
+// // 在这里留一空行
+
+// 函数调用时，函数名与括号之间不要出现空格或换行。eslint: [func-call-spacing](http://eslint.org/docs/rules/func-call-spacing)
+
+// // bad
+// test ();
+// test
+// ();
+//
+// // good
+// test();
