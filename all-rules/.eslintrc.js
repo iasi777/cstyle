@@ -556,7 +556,9 @@ module.exports = {
       FunctionExpression: {
         parameters: 1,
         body: 1
-      }
+      },
+      ArrayExpression: 1,
+      ObjectExpression: 1
     }],
 
     // specify whether double or single quotes should be used in JSX attributes
