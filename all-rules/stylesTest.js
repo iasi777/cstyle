@@ -167,3 +167,74 @@
 //
 // // good
 // test();
+
+// 对象字面量属性的分号后面加一个空格。eslint: [key-spacing](http://eslint.org/docs/rules/key-spacing)
+
+// // bad
+// var obj = {
+//   a : 1,
+//   b:  2
+// };
+//
+// // good
+// var obj = {
+//   a: 1,
+//   b: 2
+// };
+
+// 在关键词前后加一个空格，如果以关键词开头则前面不要加空格。eslint: [keyword-spacing](http://eslint.org/docs/rules/keyword-spacing)
+
+// // bad
+// if(obj === 1) {
+//   // stuff
+// }else if(obj === 2) {
+//   // stuff
+// }
+// while(obj ===1) {
+//   // stuff
+// }
+// var fun = function() {
+//   // stuff
+// };
+//
+// // good
+// if (obj === 1) {
+//   // stuff
+// } else if (obj === 2) {
+//   // stuff
+// }
+// while (obj === 1) {
+//   // stuff
+// }
+// var fun = function () {
+//   // stuff
+// };
+
+
+// 用 `\n` （LF）换行，不要用 `\r\n` （CRLF）换行，一般需要设置编辑器。eslint: [linebreak-style](http://eslint.org/docs/rules/linebreak-style)
+
+// // bad
+// var a = 'a';\r\n
+// // good
+// var a = 'a';\n
+
+// 块注释前必须有一空行。ealint: [lines-around-comment](http://eslint.org/docs/rules/lines-around-comment)
+
+// // bad
+// var a = 'a';
+// /**
+//  * 块注释
+//  */
+// function test() {
+//   // stuff
+// }
+//
+// // good
+// var a = 'a';
+//
+// /**
+//  * 块注释
+//  */
+// function test() {
+//   // stuff
+// }

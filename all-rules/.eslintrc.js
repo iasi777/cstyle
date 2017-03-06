@@ -567,7 +567,7 @@ module.exports = {
 
     // enforces spacing between keys and values in object literal properties
     // http://eslint.org/docs/rules/key-spacing
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    'key-spacing': ['error', {beforeColon: false, afterColon: true}],
 
     // require a space before & after certain keywords
     // http://eslint.org/docs/rules/keyword-spacing
@@ -575,19 +575,19 @@ module.exports = {
       before: true,
       after: true,
       overrides: {
-        return: { after: true },
-        throw: { after: true },
-        case: { after: true }
+        return: {after: true},
+        throw: {after: true},
+        case: {after: true}
       }
     }],
 
     // enforce position of line comments
     // http://eslint.org/docs/rules/line-comment-position
-    // TODO: enable?
-    'line-comment-position': ['error', {
+    // 一开启 eslint 就报错
+    'line-comment-position': ['off', {
       position: 'above',
       ignorePattern: '',
-      applyDefaultPatterns: true,
+      applyDefaultIgnorePatterns: true,
     }],
 
     // disallow mixed 'LF' and 'CRLF' as linebreaks
