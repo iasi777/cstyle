@@ -42,11 +42,13 @@
 ## 参考资料
 
   1. [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
+  1. [JavaScript Standard Style](https://github.com/feross/standard)
   1. [adamlu：javascript style guide（中文翻译）](https://github.com/adamlu/javascript-style-guide)
   1. [阮一峰：Javascript 编程风格](http://www.ruanyifeng.com/blog/2012/04/javascript_programming_style.html)
   1. [百度前端代码编写规范](https://github.com/fex-team/styleguide)
   1. [css88：前端编码规范](http://www.css88.com/archives/5361)
   1. [segmentfault：最流行的JavaScript代码规范](https://segmentfault.com/a/1190000000410316)
+  
 
 ## License
 
