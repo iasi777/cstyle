@@ -238,3 +238,16 @@
 // function test() {
 //   // stuff
 // }
+
+// 函数的参数不超过 3 个。eslint: [max-params](http://eslint.org/docs/rules/max-params)
+
+// // bad
+// function test(bar, baz, qux, qxx) {
+//   // stuff
+// }
+//
+// // good
+// function test(config) {
+//   // config 包含 bar, baz, qux, qxx 属性
+//   // stuff
+// }
