@@ -251,3 +251,77 @@
 //   // config 包含 bar, baz, qux, qxx 属性
 //   // stuff
 // }
+
+// 调用构造函数时，不要省略括号。eslint: [new-parens](http://eslint.org/docs/rules/new-parens)
+
+// // bad
+// var person = new Person;
+//
+// // good
+// var person = new Person();
+
+// 使用字面量创建数组。eslint: [no-array-constructor](http://eslint.org/docs/rules/no-array-constructor)
+
+// // bad
+// var items = new Array();
+//
+// // good
+// var items = [];
+
+// 不要使用位运算，位运算会增加项目维护难度。eslint: [no-bitwise](http://eslint.org/docs/rules/no-bitwise)
+
+// // bad
+// var x = y | z;
+// var s = y & z;
+//
+// // good
+// var x = y || z;
+// var s = y && z;
+
+
+// 不要使用 `continue` 语句。eslint: [no-continue](http://eslint.org/docs/rules/no-continue)
+
+// var sum = 0;
+// var i;
+//
+// // bad
+// for (i = 0; i < 10; i++) {
+//   if (i >= 5) {
+//     continue;
+//   }
+//
+//   sum += i;
+// }
+// // good
+// for (i = 0; i < 10; i++) {
+//   if (i < 5) {
+//     sum += i;
+//   }
+// }
+
+// 不要出现行内注释。eslint: [no-inline-comments](http://eslint.org/docs/rules/no-inline-comments)
+
+// // bad
+// var a = 1; // declaring a to 1
+//
+// // good
+// // declaring a to 1
+// var a = 1;
+
+// 不要在 `else` 语句中出现单独的 `if` 语句。eslint: [no-lonely-if](http://eslint.org/docs/rules/no-lonely-if)
+
+// // bad
+// if (foo) {
+//   // ...
+// } else {
+//   if (bar) {
+//     // ...
+//   }
+// }
+//
+// // good
+// if (foo) {
+//   // ...
+// } else if (bar) {
+//   // ...
+// }

@@ -674,7 +674,7 @@ module.exports = {
     // enforces new line after each method call in the chain to make it
     // more readable and easy to maintain
     // http://eslint.org/docs/rules/newline-per-chained-call
-    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+    'newline-per-chained-call': ['off', { ignoreChainWithDepth: 4 }],
 
     // disallow use of the Array constructor
     // http://eslint.org/docs/rules/no-array-constructor
@@ -736,7 +736,7 @@ module.exports = {
 
     // disallow use of unary operators, ++ and --
     // http://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 'error',
+    'no-plusplus': 'off',
 
     // disallow certain syntax forms
     // http://eslint.org/docs/rules/no-restricted-syntax
