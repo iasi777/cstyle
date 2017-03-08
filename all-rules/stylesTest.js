@@ -210,7 +210,6 @@
 //   // stuff
 // };
 
-
 // 用 `\n` （LF）换行，不要用 `\r\n` （CRLF）换行，一般需要设置编辑器。eslint: [linebreak-style](http://eslint.org/docs/rules/linebreak-style)
 
 // // bad
@@ -278,7 +277,6 @@
 // var x = y || z;
 // var s = y && z;
 
-
 // 不要使用 `continue` 语句。eslint: [no-continue](http://eslint.org/docs/rules/no-continue)
 
 // var sum = 0;
@@ -325,3 +323,25 @@
 // } else if (bar) {
 //   // ...
 // }
+
+// 不要链式赋值。eslint: [no-multi-assign](http://eslint.org/docs/rules/no-multi-assign)
+
+// // bad
+// var b = a = 1;
+//
+// // good
+// var a = 1;
+// var b = a;
+
+// 代码之间最多有一个空行，文件末尾最多有两个空行。eslint: [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)
+
+// // bad
+// var a = 1;
+//
+//
+// var b = 1;
+//
+// // good
+// var a = 1;
+//
+// var b = 1;
