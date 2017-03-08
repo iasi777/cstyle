@@ -333,10 +333,11 @@
 // var a = 1;
 // var b = a;
 
-// 代码之间最多有一个空行，文件末尾最多有两个空行。eslint: [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)
+// 代码之间最多有两个空行，文件末尾最多有两个空行。eslint: [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
 // // bad
 // var a = 1;
+//
 //
 //
 // var b = 1;
