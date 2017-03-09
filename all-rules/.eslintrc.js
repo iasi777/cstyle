@@ -742,8 +742,6 @@ module.exports = {
     // http://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': [
       'error',
-      'ForInStatement',
-      'ForOfStatement',
       'WithStatement',
     ],
 

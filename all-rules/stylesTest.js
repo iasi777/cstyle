@@ -346,3 +346,20 @@
 // var a = 1;
 //
 // var b = 1;
+
+// 不要有嵌套的三元运算符。eslint: [no-nested-ternary](http://eslint.org/docs/rules/no-nested-ternary)
+
+// // bad
+// var thing = foo ? bar : baz === qux ? quxx : foobar;
+//
+// // good
+// var other = baz === qux ? quxx : foobar;
+// var thing = foo ? bar : other;
+
+// 使用字面量创建对象。eslint: [no-new-object](http://eslint.org/docs/rules/no-new-object)
+
+// // bad
+// var item = new Object();
+//
+// // good
+// var item = {};
