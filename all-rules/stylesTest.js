@@ -364,3 +364,23 @@
 // // good
 // var item = {};
 
+// 不要用多余的三元运算符。eslint: [no-unneeded-ternary](http://eslint.org/docs/rules/no-unneeded-ternary)
+
+// // bad
+// var isYes = answer === 1 ? true : false;
+// var isNo = answer === 1 ? false : true;
+// var b = a ? a : 1;
+//
+// // good
+// var isYes = answer === 1;
+// var isNo = answer !== 1;
+// var b = a || 1;
+
+// 对象的左花括号右边和右花括号左边不要出现空格。eslint: [object-curly-spacing](http://eslint.org/docs/rules/object-curly-spacing)
+
+// //bad
+// var obj = { a: 1 };
+//
+// // good
+// var obj = {a: 1};
+
