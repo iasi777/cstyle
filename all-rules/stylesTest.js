@@ -384,3 +384,13 @@
 // // good
 // var obj = {a: 1};
 
+// 对象的每一个属性都在新的一行。eslint: [object-property-newline](http://eslint.org/docs/rules/object-property-newline)
+
+// // bad
+// var obj = {type: 'object', style: 'newline'};
+//
+// // good
+// var obj = {
+//   name: 'object',
+//   style: 'newline'
+// };
