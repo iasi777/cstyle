@@ -394,3 +394,15 @@
 //   name: 'object',
 //   style: 'newline'
 // };
+
+// 每个变量声明前都加 `var`，`let` 和 `const` 。eslint: [one-var](http://eslint.org/docs/rules/one-var)
+
+// // bad
+// var a = 1,
+//   b = 1,
+//   c = 1;
+//
+// // good
+// var a = 1;
+// var b = 1;
+// var c = 1;
