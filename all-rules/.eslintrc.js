@@ -547,7 +547,7 @@ module.exports = {
       outerIIFEBody: 1,
       MemberExpression: 1,
       CallExpression: {
-        arguments: 1,
+        arguments: 1
       },
       FunctionDeclaration: {
         parameters: 1,
@@ -587,7 +587,7 @@ module.exports = {
     'line-comment-position': ['off', {
       position: 'above',
       ignorePattern: '',
-      applyDefaultIgnorePatterns: true,
+      applyDefaultIgnorePatterns: true
     }],
 
     // disallow mixed 'LF' and 'CRLF' as linebreaks
@@ -604,7 +604,7 @@ module.exports = {
     // http://eslint.org/docs/rules/lines-around-directive
     'lines-around-directive': ['error', {
       before: 'never',
-      after: 'always',
+      after: 'always'
     }],
 
     // specify the maximum depth that blocks can be nested
@@ -618,7 +618,7 @@ module.exports = {
       ignoreComments: false,
       ignoreRegExpLiterals: true,
       ignoreStrings: true,
-      ignoreTemplateLiterals: true,
+      ignoreTemplateLiterals: true
     }],
 
     // specify the max number of lines in a file
@@ -656,7 +656,7 @@ module.exports = {
       newIsCap: true,
       newIsCapExceptions: [],
       capIsNew: false,
-      capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
+      capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List']
     }],
 
     // disallow the omission of parentheses when invoking a constructor with no arguments
@@ -742,7 +742,7 @@ module.exports = {
     // http://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': [
       'off',
-      'WithStatement',
+      'WithStatement'
     ],
 
     // disallow tab characters entirely
@@ -786,7 +786,7 @@ module.exports = {
     // 对象的每一个属性都在新的一行
     // http://eslint.org/docs/rules/object-property-newline
     'object-property-newline': ['error', {
-      allowMultiplePropertiesPerLine: false,
+      allowMultiplePropertiesPerLine: false
     }],
 
     // allow just one var statement per function
@@ -811,7 +811,7 @@ module.exports = {
 
     // require quotes around object literal property names
     // 只给非法标识符的对象属性名称加引号
-    // http://eslint.org/docs/rules/quote-props.html
+    // http://eslint.org/docs/rules/quote-props
     'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: true }],
 
     // specify whether double or single quotes should be used

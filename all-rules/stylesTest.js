@@ -395,7 +395,7 @@
 //   style: 'newline'
 // };
 
-// 每个变量声明前都加 `var`，`let` 和 `const` 。eslint: [one-var](http://eslint.org/docs/rules/one-var)
+// 每个变量声明前都加 `var`，`let` 或 `const` 。eslint: [one-var](http://eslint.org/docs/rules/one-var)
 
 // // bad
 // var a = 1,
@@ -406,3 +406,55 @@
 // var a = 1;
 // var b = 1;
 // var c = 1;
+
+// 尽量使用简短的赋值运算符。eslint: [operator-assignment](http://eslint.org/docs/rules/operator-assignment)
+
+// // bad
+// x = x + y;
+// x = x * y;
+//
+// // good
+// x += y;
+// x *= y;
+
+// 只给非法标识符的对象属性名称加引号。eslint: [quote-props](http://eslint.org/docs/rules/quote-props)
+
+// // bad
+// obj = {
+//   'a': 1,
+//   'while': 1,
+//   '123': 1,
+//   'a-b': 1
+// };
+//
+// // good
+// obj = {
+//   a: 1,
+//   while: 1,
+//   '123': 1,
+//   'a-b': 1
+// };
+
+// 对字符串使用单引号 `''`。eslint: [quotes](http://eslint.org/docs/rules/quotes)
+
+// // bad
+// var str = "str";
+//
+// // good
+// var str = 'str';
+
+// 语句结束一定要加分号。eslint: [semi](http://eslint.org/docs/rules/semi)
+
+// // bad
+// var name = "ESLint"
+//
+// object.method = function () {
+//   // ...
+// }
+//
+// // good
+// var name = "ESLint";
+//
+// object.method = function () {
+//   // ...
+// };
