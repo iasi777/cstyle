@@ -458,3 +458,124 @@
 // object.method = function () {
 //   // ...
 // };
+
+// 在分号后面加空格，行末的分号除外。[semi-spacing](http://eslint.org/docs/rules/semi-spacing)
+
+// // bad
+// for (var i = 0;i < 5;i++) {
+//   // stuff
+// }
+//
+// // good
+// for (var i = 0; i < 5; i++) {
+//   // stuff
+// }
+
+// 在不换行的左花括号之前加一个空格。eslint: [space-before-blocks](http://eslint.org/docs/rules/space-before-blocks)
+
+// // bad
+// if (a){
+//   b();
+// }
+//
+// function a(){}
+//
+// for (; ; ){
+//   b();
+// }
+//
+// try {} catch (a){}
+//
+// class Foo{
+//   constructor(){}
+// }
+//
+// // good
+// if (a) {
+//   b();
+// }
+//
+// function a() {}
+//
+// for (; ; ) {
+//   b();
+// }
+//
+// try {} catch (a) {}
+//
+// class Foo {
+//   constructor() {}
+// }
+
+// 匿名函数的左括号之前加一个空格，有名函数的左括号之前不加空格，异步箭头函数的左括号之前加一个空格。eslint: [space-before-function-paren](http://eslint.org/docs/rules/space-before-function-paren)
+
+// // bad
+// function foo () {
+//   // ...
+// }
+//
+// var bar = function() {
+//   // ...
+// };
+//
+// class Foo {
+//   constructor () {
+//     // ...
+//   }
+// }
+//
+// var foo = {
+//   bar () {
+//     // ...
+//   }
+// };
+//
+// var foo = async(a) => await a;
+//
+// // good
+// function foo() {
+//   // ...
+// }
+//
+// var bar = function () {
+//   // ...
+// };
+//
+// class Foo {
+//   constructor() {
+//     // ...
+//   }
+// }
+//
+// var foo = {
+//   bar() {
+//     // ...
+//   }
+// };
+//
+// var foo = async (a) => await a;
+
+
+// 不要在左括号右边和右括号左边加空格。eslint: [space-in-parens](http://eslint.org/docs/rules/space-in-parens)
+
+// // bad
+// foo( 'bar');
+// foo('bar' );
+// foo( 'bar' );
+//
+// var foo = ( 1 + 2 ) * 3;
+// ( function () {
+//   return 'bar';
+// } )();
+//
+// // good
+// foo();
+//
+// foo('bar');
+//
+// var foo = (1 + 2) * 3;
+// (function () {
+//   return 'bar';
+// })();
+
+//
