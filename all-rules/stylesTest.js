@@ -580,11 +580,11 @@
 
 // 在操作符前后加一个空格。eslint: [space-infix-ops](http://eslint.org/docs/rules/space-infix-ops)
 
-// bad
-var foo = b+c;
-var bar = a?b:c;
-
-// good
-var foo = b + c;
-var bar = a ? b : c;
+// // bad
+// var foo = b+c;
+// var bar = a?b:c;
+//
+// // good
+// var foo = b + c;
+// var bar = a ? b : c;
 
