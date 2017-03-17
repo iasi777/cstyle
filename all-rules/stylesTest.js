@@ -578,4 +578,25 @@
 //   return 'bar';
 // })();
 
+// 在操作符前后加一个空格。eslint: [space-infix-ops](http://eslint.org/docs/rules/space-infix-ops)
+
+// // bad
+// var foo = b+c;
+// var bar = a?b:c;
 //
+// // good
+// var foo = b + c;
+// var bar = a ? b : c;
+
+// 对于一元操作符，单词操作符的后面加一个空格，符号操作符前后不加空格。eslint: [space-unary-ops](http://eslint.org/docs/rules/space-unary-ops)
+// 单词操作符：new, delete, typeof, void, yield
+// 符号操作符：-, +, --, ++, !, !!
+
+// // bad
+// delete(obj.a);
+// i ++;
+//
+// // good
+// delete obj.a;
+// i++;
+
