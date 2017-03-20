@@ -475,13 +475,13 @@ module.exports = {
       line: {
         ignorePattern: '.*',
         ignoreInlineComments: true,
-        ignoreConsecutiveComments: true,
+        ignoreConsecutiveComments: true
       },
       block: {
         ignorePattern: '.*',
         ignoreInlineComments: true,
-        ignoreConsecutiveComments: true,
-      },
+        ignoreConsecutiveComments: true
+      }
     }],
 
     // require trailing commas in multiline object literals
