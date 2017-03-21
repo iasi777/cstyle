@@ -922,7 +922,7 @@ module.exports = {
 
     // disallow declaration of variables already declared in the outer scope
     // http://eslint.org/docs/rules/no-shadow
-    'no-shadow': 'error',
+    'no-shadow': 'off',
 
     // disallow shadowing of names such as `NaN Infinity undefined eval arguments`
     // http://eslint.org/docs/rules/no-shadow-restricted-names
